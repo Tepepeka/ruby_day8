@@ -1,6 +1,6 @@
 require 'rubygems'
-  require 'nokogiri'
-    require 'open-uri'
+require 'nokogiri'
+require 'open-uri'
 
 def get_townhall_email(url)
   page = Nokogiri::HTML(URI.open(url))
@@ -22,7 +22,7 @@ def get_townhall_urls
     emails[page.css('a.lientxt')[i].children.text] = email
     
   end
-  p [].push emails
+  puts [].push emails
 end
 
 def perform
